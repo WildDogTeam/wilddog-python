@@ -16,7 +16,7 @@ $ sudo pip install wilddog-python
 ### 示例
 ```python
 
-from wilddog import wilddog
+from wilddog import WilddogApplication
 wilddog = wilddog.WilddogApplication('https://your_storage.wilddogio.com', None)
 result = wilddog.get('/users', None)
 print result

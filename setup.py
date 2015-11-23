@@ -10,7 +10,7 @@ with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     long_description = readme.read()
 
 setup(name='wilddog-python',
-      version='1.0',
+      version='1.0.1',
       description="Python interface to the Wilddog's REST API.",
       long_description=long_description,
       classifiers=[

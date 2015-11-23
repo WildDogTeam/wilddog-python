@@ -162,16 +162,14 @@ class WilddogAuthentication(object):
         self.debug = debug
         self.admin = admin
         self.email = email
-        self.provider = 'password'
-        self.extra = (extra or {}).copy()
-        self.extra.update({'debug': debug, 'admin': admin,
-                           'email': self.email, 'provider': self.provider})
+        self.provider = 'custom'
+        self.extra = extra
 
     def get_user(self):
         """
         获取已验证用户信息的方法。返回的用户信息中包含token、email 和 provider
         """
-        token = create_token(self.secret, self.extra)
+        token = create_token(self.secret, self.extra, {'admin': self.admin, 'debug': self.debug})
         user_id = self.extra.get('uid')
         return WilddogUser(self.email, token, self.provider, user_id)
 

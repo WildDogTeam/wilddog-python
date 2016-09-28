@@ -17,7 +17,7 @@ $ sudo pip install wilddog-python
 ```python
 
 from wilddog import WilddogApplication
-wilddog = wilddog.WilddogApplication('https://your_storage.wilddogio.com', None)
+wilddog = WilddogApplication('https://your_storage.wilddogio.com', None)
 result = wilddog.get('/users', None)
 print result
 {'1': 'John Doe', '2': 'Jane Doe'}

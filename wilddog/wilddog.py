@@ -7,11 +7,11 @@ except ImportError:
 
 import json
 
-from wilddog_token_generator import create_token
-from decorators import http_connection
+from .wilddog_token_generator import create_token
+from .decorators import http_connection
 
-from async import process_pool
-from jsonutil import JSONEncoder
+from .async import process_pool
+from .jsonutil import JSONEncoder
 
 __all__ = ['WilddogAuthentication', 'WilddogApplication']
 
